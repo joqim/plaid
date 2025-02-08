@@ -60,6 +60,21 @@
             width: 100%;
         }
 
+        .meta {
+            font-size: 14px;
+            font-family: 'CERNSemibold', sans-serif;
+        }
+
+        .circle::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
         .left {
             width: 40%;
             padding: 40px;
@@ -73,12 +88,14 @@
             font-weight: 800;
             font-family: 'CERNExtraBold', sans-serif;
             line-height: 0.9;
+            margin-top: 20%;
         }
 
         .left .number {
-            font-size: 50px;
-            font-weight: 700;
-            font-family: 'CERNBold', sans-serif;
+            font-size: 80px;
+            font-weight: 800;
+            font-family: 'CERNExtraBold', sans-serif;
+            line-height: 0.9;
         }
 
         .right {
@@ -86,31 +103,33 @@
             padding: 40px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            height: 100vh;
         }
 
         .right .header {
             display: flex;
             justify-content: space-between;
-            font-size: 16px;
+            font-size: 14px;
             font-family: 'CERNMedium', sans-serif;
         }
 
         .right .header a {
             text-decoration: none;
             color: black;
-            border-bottom: 1px solid black;
-            font-family: 'CERNRegular', sans-serif;
+            border-bottom: 1.7px solid black;
+            font-family: 'CERNSemibold', sans-serif;
+            padding-bottom: 4px;
+            margin-left: auto;
         }
 
         .services {
-            margin-top: 20px;
+            margin-top: 8%;
         }
 
         .service-item {
             border-bottom: 1px solid #ddd;
-            font-size: 18px;
-            font-family: 'CERNMedium', sans-serif;
+            font-size: 16px;
+            font-family: 'CERNSemibold', sans-serif;
             cursor: pointer;
         }
 
@@ -118,13 +137,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
         }
 
         .plus {
-            font-weight: 700;
-            font-family: 'CERNBold', sans-serif;
+            font-family: 'CERNRegular', sans-serif;
             transition: transform 0.3s ease;
+            font-size: 32px;
         }
 
         .service-description {
@@ -152,17 +171,22 @@
     <div class="section">
         <div class="left">
             <div>
-                <span>● Our services</span>
+                <span class="meta circle">Our services</span>
                 <div class="title">FRONT<br>END</div>
             </div>
             <div class="number">01</div>
         </div>
         <div class="right">
             <div class="header">
-                <span>(Front End services)</span>
                 <a href="#">Let's work together</a>
             </div>
             <div class="services">
+                <!-- Static "Front End Services" item -->
+                <div class="service-item static">
+                    <div class="title">
+                        <span>(Front End Services)</span>
+                    </div>
+                </div>
                 <div class="service-item">
                     <div class="title">
                         <span>Creative development</span>
@@ -184,7 +208,6 @@
                     </div>
                     <div class="service-description">Creating high-converting, responsive landing pages.</div>
                 </div>
-                <!-- Additional Front End Services -->
                 <div class="service-item">
                     <div class="title">
                         <span>Mobile responsiveness</span>
@@ -199,6 +222,13 @@
                     </div>
                     <div class="service-description">Designing intuitive user interfaces for seamless experiences.</div>
                 </div>
+                <div class="service-item">
+                    <div class="title">
+                        <span>SEO Optimization</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <div class="service-description">Optimizing websites for search engines to improve visibility.</div>
+                </div>
             </div>
         </div>
     </div>
@@ -208,10 +238,12 @@
             <div class="number">02</div>
         </div>
         <div class="right">
-            <div class="header">
-                <span>(Backend services)</span>
-            </div>
             <div class="services">
+                <div class="service-item static">
+                    <div class="title">
+                        <span>(Back End Services)</span>
+                    </div>
+                </div>
                 <div class="service-item">
                     <div class="title">
                         <span>Backend structures</span>
@@ -233,7 +265,6 @@
                     </div>
                     <div class="service-description">Implementing secure user authentication and authorization.</div>
                 </div>
-                <!-- Additional Backend Services -->
                 <div class="service-item">
                     <div class="title">
                         <span>API Development</span>
@@ -249,6 +280,14 @@
                     <div class="service-description">Implementing and optimizing database systems for performance and
                         scalability.</div>
                 </div>
+                <div class="service-item">
+                    <div class="title">
+                        <span>Cloud Infrastructure</span>
+                        <span class="plus">+</span>
+                    </div>
+                    <div class="service-description">Setting up and managing cloud-based infrastructure for scalable solutions.</div>
+                </div>
+
             </div>
         </div>
     </div>
